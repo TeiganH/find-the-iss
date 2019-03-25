@@ -3,7 +3,7 @@ import { Route,Link } from "react-router-dom";
 import About from './components/About.js'
 import Home from './components/Home.js'
 import './App.css'
-import {css} from 'https://unpkg.com/leaflet@1.4.0/dist/leaflet.css'
+// import {css} from 'https://unpkg.com/leaflet@1.4.0/dist/leaflet.css'
 
 
 class App extends Component {
@@ -32,8 +32,6 @@ class App extends Component {
         <ul>
           <li>
             <Link to="/">Home</Link>
-          </li>
-          <li>
             <Link to="/about">About</Link>
           </li>
         </ul>
