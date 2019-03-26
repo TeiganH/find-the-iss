@@ -3,7 +3,7 @@ import { Route,Link } from "react-router-dom";
 import About from './components/About.js';
 import Home from './components/Home.js';
 import Map from './components/Map.js'
-import GetISS from './components/GetISS.js'
+// import GetISS from './components/GetISS.js'
 import './App.css';
 
 // Map provided by leaflet.js
@@ -13,23 +13,24 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state={
-      latitude: '',
-      longitude: '',
+      lat: '',
+      lng: '',
+      position: [],
     }
   }
-  
+
   getISS(){
     fetch('http://api.open-notify.org/iss-now.json')
     .then(response=>response.json())
     .then(json=>{
         this.setState({
-            latitude: json.iss_position.latitude,
-            longitude: json.iss_position.longitude,
+            lat: json.iss_position.latitude,
+            lng: json.iss_position.longitude,
         })
     }) 
   }
   render() {
-    
+    let position = [this.state.lat, this.state.lng]
   return (
       <div className="App">
         <nav>
@@ -46,13 +47,12 @@ class App extends Component {
           <Route path="/about" component={About} />
         </main>
         
-        <button onClick={()=>this.getISS()}>Find the ISS</button>
-        
         <div>
-          <Map />
-          
-            <h2>{this.state.latitude}</h2>
-            <h2>{this.state.longitude}</h2>
+          <button onClick={()=>this.getISS()}>Find the ISS</button>
+        
+          <div>
+            <Map latlng={position}/>
+          </div>
         </div>
 
       </div>

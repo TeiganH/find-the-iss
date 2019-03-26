@@ -1,14 +1,14 @@
-import React from "react";
-import {Map as LeafletMap, TileLayer, Marker, Popup} from 'react-leaflet'
-import L from "leaflet";
+import React, {Component} from "react";
+import {Map as LeafletMap, TileLayer, Marker} from 'react-leaflet'
+// import L from "leaflet";
 
 
-class Map extends React.Component {
+class Map extends Component {
     render() {
         return (
           <LeafletMap
-            center={[50, 10]}
-            zoom={3}
+            center={[0, 0]}
+            zoom={1}
             maxZoom={10}
             attributionControl={true}
             zoomControl={true}
@@ -21,12 +21,7 @@ class Map extends React.Component {
             <TileLayer
               url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
             />
-            <Marker position={[74.0060, 40.7128
-        ]}>
-              <Popup>
-                Popup for any custom information.
-              </Popup>
-            </Marker>
+            <Marker position={this.props.latlng}/> 
           </LeafletMap>
         );
       }

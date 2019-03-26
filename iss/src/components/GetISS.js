@@ -9,9 +9,11 @@ class GetISS extends Component {
             this.setState({
                 latitude: json.iss_position.latitude,
                 longitude: json.iss_position.longitude,
+                
             })
-        }) 
+        }, console.log(this.state.latitude)) 
     }
+
     render(){
         return(
             <div>
