@@ -35,6 +35,47 @@ nav li a {
   width: 400px;
   margin: 0 auto;
 }
+footer {
+  height: 100px;
+  width: 500px;
+  display: flex;
+  align-items: baseline;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+.NASA {
+  height: 80px;
+  width: 80px;
+  margin: 0;
+  left: 0;
+}
+
+.CSA {
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+}
+
+.ESA {
+  height: 90px;
+  width: 90px;
+  margin: 0 10px;
+}
+
+.JAXA {
+  height: 90px;
+  width: 90px;
+  margin: 0 0px 0;
+}
+
+.RCM {
+  height: 60px;
+  width: 60px;
+  margin: 10px 0px 10px 5px;
+}
 
 
 

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Route,Link } from "react-router-dom";
-import About from './components/About.js';
-import Home from './components/Home.js';
+// import { Route,Link } from "react-router-dom";
 import Map from './components/Map.js'
 // import GetISS from './components/GetISS.js'
 import './App.css';
+import Nav from './components/Nav.js'
+import Footer from './components/Footer.js'
 
 // Map provided by leaflet.js
 
@@ -34,25 +34,14 @@ class App extends Component {
   return (
       <div className="App">
         <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
-        
-        <main>
-          <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About} />
-        </main>
-        
-        <div>
+          <Nav />
+         </nav>
+        <div className= "buttonDiv">
           <button onClick={()=>this.getISS()}>Find the ISS</button>
-        
-          <div>
+        <div className="mapDiv">
             <Map latlng={position}/>
-          </div>
+        </div>
+        <Footer />
         </div>
 
       </div>
