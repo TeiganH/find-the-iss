@@ -29,14 +29,12 @@ class App extends Component {
   }
   
   getISS(){
-    fetch('https://thingproxy.freeboard.io/fetch/http://api.open-notify.org/iss-now.json', {
-      credentials: 'same-origin'
-    })
+    fetch('https://api.wheretheiss.at/v1/satellites/25544')
     .then(response=>response.json())
     .then(json=>{
         this.setState({
-            lat: json.iss_position.latitude,
-            lng: json.iss_position.longitude,
+            lat: json.latitude,
+            lng: json.longitude,
         })
     }) 
   }
