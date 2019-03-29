@@ -9,6 +9,7 @@ render(){
         <nav>
             <ul><li>
                 <Link to="/">Home</Link>
+                <div className="infoDiv" onClick={this.props.telemetryToggler}>ISS Info</div>
                 <Link to="/about">About</Link> 
              </li></ul> 
             <main>
