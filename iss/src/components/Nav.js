@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Route,Link } from "react-router-dom";
 import About from './About.js';
-import Home from './Home.js';
+import Home from './Home.js'
 
 class Nav extends Component{
 render(){
