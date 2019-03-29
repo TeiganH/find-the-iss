@@ -1,7 +1,7 @@
-# find-the-iss
+# where-is-iss
 Where is the ISS right now? Find out where above the earth it is at any given moment!
 
-### Link: https://find-the-iss.herokuapp.com/
+### Link: https://warm-reef-45637.herokuapp.com/ <-- name will be changed later
 
 ![Imgur](https://i.imgur.com/P602IGO.png)
 ![Imgur](https://i.imgur.com/oqQ8BEJ.png)
@@ -20,14 +20,17 @@ A simple wireframe showing ideas for components, state, props, etc.
 ### MVP/PostMVP 
 
  
-#### MVP EXAMPLE
+#### MVP 
 - Find and use external api 
 - Render data on page 
 - Allow user to visually see where above the earth the ISS is
 
-#### PostMVP EXAMPLE
+#### PostMVP 
 - Animated CSS logo
 - ISS telemetry data live update every two seconds in side bar
+
+#### Future MVP
+- Fully reactive logo and components
 
 ## React Component Hierarchy
 - Parent component: App.js
@@ -52,28 +55,27 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 
 ## Helper Functions
-Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
 
 | Function | Description | 
 | --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string of text | 
+| setInterval | This will keep the api in the sidebar from breaking due to too many api calls | 
+| position | Keeps track of the position of the ISS coordinates to feed to the marker |
+| isstelemetry | Updates every two seconds via setInterval with ISS telemetry data
+| map | Lists out each item in the isstelemetry |
+| marker | Overrides default marker icon provided by react-leaflet |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+ React-Leaflet: To create map and marker functions
 
 ## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
+To show the constant movement of the ISS I wanted to list telemetry data that could be seen on the main app page. To render it in such a way that it didn't break the api, I had to set an interval for every two seconds in an componentDidMount function.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+componentDidMount(){
+    setInterval(this.issInfo, 2000)
+  }
 ```
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
+ As above, the telemetry data when rendered directly updated so quickly that it broke. To keep that happening, I set an interval for an update every two seconds in a componentDidMount() that I then passed into the Article component.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
