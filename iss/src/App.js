@@ -3,7 +3,7 @@ import Map from './components/Map.js'
 import './App.css';
 import Nav from './components/Nav.js'
 import Footer from './components/Footer.js'
-import Article from './components.Article.js'
+import Article from './components/Article.js'
 
 // Map provided by leaflet.js
 
@@ -83,7 +83,7 @@ class App extends Component {
           <div className="buttonDiv">
             <button onClick={()=>this.getISS()}>Find the ISS</button>
           </div>
-          <Article />
+          <Article isstelemetry={isstelemetry}/>
         </aside>
         <section>
           <div className="mapDiv">
@@ -94,8 +94,6 @@ class App extends Component {
         <Footer />
         </footer>
       </div>
-
-    
   )
     
    }}

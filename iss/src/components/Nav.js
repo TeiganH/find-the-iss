@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Route,Link } from "react-router-dom";
 import About from './About.js';
-import Home from './Home.js';
+import Home from './Home.js'
 
 class Nav extends Component{
 render(){
@@ -9,7 +9,6 @@ render(){
         <nav>
             <ul><li>
                 <Link to="/">Home</Link>
-                <div className="infoDiv" onClick={this.props.telemetryToggler}>ISS Info</div>
                 <Link to="/about">About</Link> 
              </li></ul> 
             <main>

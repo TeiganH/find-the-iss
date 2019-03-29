@@ -6,7 +6,7 @@ export default class Article extends Component {
       <article>
         The International Space Station (ISS) is a space station, or a habitable artificial satellite, in low Earth orbit. 
           <div classname="isstelemetry">
-            {isstelemetry.map((item,index)=>(
+            {this.props.isstelemetry.map((item,index)=>(
               <p key={index}>
                 {item}
               </p>
