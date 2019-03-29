@@ -6,6 +6,7 @@ class About extends Component {
     return (
       <div>
         <p>Where is ISS is made by Teigan Hockman, full-stack software engineer student at <a href="https://generalassemb.ly/" target="_blank" rel="noopener noreferrer">General Assembly NYC</a>.</p>
+        <a href="https://www.linkedin.com/in/teiganhockman/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="https://github.com/TeiganH" target="_blank" rel="noopener noreferrer">Github</a>
         <ul>
           Resources used: 
           <li><a href="https://react-leaflet.js.org/" target="_blank" rel="noopener noreferrer">React-Leaflet</a></li>
