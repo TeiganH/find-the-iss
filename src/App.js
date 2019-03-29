@@ -29,7 +29,7 @@ class App extends Component {
   }
   
   getISS(){
-    fetch('https://api.open-notify.org/iss-now.json')
+    fetch('https://thingproxy.freeboard.io/fetch/http://api.open-notify.org/iss-now.json')
     .then(response=>response.json())
     .then(json=>{
         this.setState({
