@@ -1,7 +1,7 @@
 # where-is-iss
 Where is the ISS right now? Find out where above the earth it is at any given moment!
 
-### Link: https://warm-reef-45637.herokuapp.com/ <-- name will be changed later
+### Link: Not deployed yet to Heroku
 
 ![Imgur](https://i.imgur.com/P602IGO.png)
 ![Imgur](https://i.imgur.com/oqQ8BEJ.png)
