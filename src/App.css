@@ -23,12 +23,17 @@ aside {
   background-color: #FAFAF8;
   overflow-y: scroll;
 }
-.isstelemetry {
-  width: 18vw;
-  float:right;
+
+aside article {
+
+}
+aside article div {
+  width: 15vw;
+  /* float:right; */
   text-align: right;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 2.5vmin;
+  font-size: 2.2vmin;
+  line-height: 75%;
 }
 
 nav {
